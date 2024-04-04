@@ -1,5 +1,5 @@
 body {
-    background-image: url('img/background1.jpg');
+    background-image: url('img/gradient-black-grey-linear-3840x2160-c2-000000-778899-a-90-f-14.svg');
     background-size: cover; /* Faz a imagem cobrir todo o fundo */
     background-repeat: no-repeat; /* Evita a repetição da imagem */
     margin: 0;
@@ -8,56 +8,104 @@ body {
     color: #1d1c1c; /* Branco */
 }
 
-.profile img { /* Foto do perfil */
-    position: absolute; /* Posicionamento fixo para manter a imagem no mesmo local ao rolar a página */
-    top: 30px; /* Distância do topo */
-    right: 120px; /* Distância da direita */
-    z-index: 9999; /* Imagem esteja acima de outros elementos */
-    width: 400px; /* Largura da imagem */
-    height: 400px; /* Proporção da imagem */
-    border-radius: 50%; /* Formato circular */
-    border: 5px solid #dad9f3; /* Adiciona uma borda azul claro com largura de 5 pixels */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* PROFILE IMAGE */
+.profile img { 
+    position: absolute; 
+    top: 5%; /* Distância do topo em relação à altura do viewport */
+    right: 4%; /* Distância da direita em relação à largura do viewport */
+    z-index: 9999; 
+    width: 20%; /* Largura em relação à largura do viewport */
+    max-width: 400px; /* Largura máxima da imagem */
+    height: auto; /* Altura automática para manter a proporção */
+    border-radius: 50%; 
+    border: 0.2em solid #dad9f3; /* Adiciona uma borda azul claro com largura de 0.5em */
+}
+
+.profile img.hover {
+    display: none; /* Inicialmente oculta a imagem de perfil no hover */
+}
+
+.profile:hover img.normal {
+    display: none; /* Quando o mouse está sobre a div, a imagem normal é ocultada */
+}
+
+.profile:hover img.hover {
+    display: inline-block; /* Quando o mouse está sobre a div, a imagem de hover é exibida */
 }
 
 
-/* Estilos para o alinhamento dos itens */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* GITHUB - LINKEDIN - CV */
 .container {
     width: 80%;
     margin: 0 auto;
-    margin-top: 70px; /* Margem superior para afastar os itens do topo */
+    margin-top: 7vh; /* Margem superior em relação à altura da viewport */
 }
 
 header {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
 }
 
 h2, h1, h3 {
     margin: 0;
 }
 
-h2, h1 {
-    align-self: flex-start;
-}
-
 h1 {
-    font-size: 60px;
+    font-size: 6vw; /* Tamanho de fonte responsivo em relação à largura da viewport */
     color: white;
+    margin-right: 20%; /* Margem direita para alinhar à direita */
 }
 
 h2 {
-    font-size: 50px;
+    font-size: 5vw; /* Tamanho de fonte responsivo em relação à largura da viewport */
+    margin-right: 15%; /* Margem direita para alinhar à direita */
 }
 
 h3 {
-    font-size: 24px;
+    font-size: 2vw; /* Tamanho de fonte responsivo em relação à largura da viewport */
+    margin-right: 10%; /* Margem direita para alinhar à direita */
 }
 
 .navsocials {
     position: absolute;
-    top: 100px;
+    top: 9vh; /* Distância do topo em relação à altura da viewport */
     right: 0;
-    left: 0; /* Define a largura total da div */
+    left: 18%; /* Define a largura total da div */
     text-align: center; /* Centraliza os elementos filho horizontalmente */
 }
 
@@ -67,48 +115,50 @@ h3 {
     transition: transform 0.3s; /* Adiciona uma transição suave para a mudança de tamanho */
 }
 
-
-
 .navsocials ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: inline-block; /* Para que o texto centralize corretamente */
 }
 
 .navsocials ul li {
-    display: inline;
-    margin-right: 10px;
+    display: inline-block; /* Alterado para inline-block para que os itens fiquem em linha */
+    margin-right: 1.4vw; /* Distancia entre os ícones */
 }
 
 .navsocials ul li img {
-    width: 50px;
-    height: auto;
-    position: absolute; /* Posicionamento fixo para manter a imagem no mesmo local ao rolar a página */
-top: 450px; /* Distância do topo */
-right: 350px; /* Distância da direita */
-z-index: 9999; /* Garante que a imagem esteja acima de outros elementos */
-width: 50px; /* Define a largura da imagem */
-height: 50px; /* Mantém a proporção da imagem */
+    width: 5vw; /* Largura responsiva em relação à largura da viewport */
+    height: auto; /* Altura automática para manter a proporção */
 }
 
-/* Primeira imagem */
-.navsocials ul li:nth-child(1) img {
-    top: -25px; /* Distância do topo */
-    left: 520px; /* Distância da borda esquerda */
+/* Ajuste de posição das imagens em diferentes tamanhos de tela */
+@media screen and (max-width: 768px) {
+    .navsocials ul li:nth-child(1) img {
+        left: 10vw; /* Nova posição para a primeira imagem em telas menores */
+    }
+    .navsocials ul li:nth-child(2) img {
+        left: 20vw; /* Nova posição para a segunda imagem em telas menores */
+    }
+    .navsocials ul li:nth-child(3) img {
+        left: 30vw; /* Nova posição para a terceira imagem em telas menores */
+    }
 }
 
-/* Segunda imagem */
-.navsocials ul li:nth-child(2) img {
-    top: -25px; /* Distância do topo */
-    left: 600px; /* Distância da borda esquerda */
-}
 
-/* Terceira imagem */
-.navsocials ul li:nth-child(3) img {
-    top: -25px; /* Distância do topo */
-    left: 680px; /* Distância da borda esquerda */
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .projetos {
@@ -130,3 +180,31 @@ footer {
     margin-top: 40px;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+h4 {
+    text-align: left; /* Alinha o texto à esquerda */
+    max-width: 800px; /* Define uma largura máxima para o texto */
+    margin: 0 auto; /* Centraliza o texto horizontalmente */
+    padding: 20px; /* Adiciona um espaçamento interno ao redor do texto */
+    font-size: 1.2em; /* Define o tamanho da fonte */
+}
+
+/* Adiciona media query para tornar o texto responsivo */
+@media screen and (max-width: 768px) {
+    h4 {
+        font-size: 1em; /* Reduz o tamanho da fonte para dispositivos menores */
+   
+    }
+}
