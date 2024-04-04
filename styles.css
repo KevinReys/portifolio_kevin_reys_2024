@@ -12,54 +12,78 @@ body {
     position: absolute; /* Posicionamento fixo para manter a imagem no mesmo local ao rolar a página */
     top: 30px; /* Distância do topo */
     right: 120px; /* Distância da direita */
-    z-index: 9999; /* Garante que a imagem esteja acima de outros elementos */
-    width: 400px; /* Define a largura da imagem */
-    height: 400px; /* Mantém a proporção da imagem */
-    border-radius: 50%; /* Define o raio da borda para criar o formato circular */
+    z-index: 9999; /* Imagem esteja acima de outros elementos */
+    width: 400px; /* Largura da imagem */
+    height: 400px; /* Proporção da imagem */
+    border-radius: 50%; /* Formato circular */
+    border: 5px solid #dad9f3; /* Adiciona uma borda azul claro com largura de 5 pixels */
 }
 
 
-
-h1 { /* ''FULLSTACK DEVELOPER'' */
-    color: #fff;
-    font-size: 50px;
-    margin-bottom: 10px; /* Margem inferior */
-}
-
-h3 { /* ''Estudante de ADS'' */
-    color: #413f3f;
-    font-size: 21px; 
-    margin-bottom: 10px; /* Margem inferior*/
-}
-
-h4 { /* ''Oi, eu sou o Kevin!'' */
-    color: #ffffff;
-    font-size: 20px;
-    margin-top: 15px; /* Margem superior */
-}
-
-/* Estilos padrão */
+/* Estilos para o alinhamento dos itens */
 .container {
     width: 80%;
     margin: 0 auto;
+    margin-top: 70px; /* Margem superior para afastar os itens do topo */
 }
 
-nav ul {
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+h2, h1, h3 {
+    margin: 0;
+}
+
+h2, h1 {
+    align-self: flex-start;
+}
+
+h1 {
+    font-size: 60px;
+    color: white;
+}
+
+h2 {
+    font-size: 50px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+.navsocials {
+    position: absolute;
+    top: 100px;
+    right: 0;
+    left: 0; /* Define a largura total da div */
+    text-align: center; /* Centraliza os elementos filho horizontalmente */
+}
+
+.navsocials ul li a:hover img {
+    filter: grayscale(100%) brightness(1000%) sepia(80%) hue-rotate(200deg); /* Aplica uma cor azul ao ícone */
+    transform: scale(1.6); /* Aumenta o tamanho do ícone */
+    transition: transform 0.3s; /* Adiciona uma transição suave para a mudança de tamanho */
+}
+
+
+
+.navsocials ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex;
-    justify-content: center; /* Centraliza os itens horizontalmente */
+    display: inline-block; /* Para que o texto centralize corretamente */
 }
 
-nav ul li {
-    display: inline; /* Exibe os itens em linha */
+.navsocials ul li {
+    display: inline;
     margin-right: 10px;
 }
 
-nav ul li img {
-    width: 50px; /* Define a largura dos ícones */
-    height: auto; /* Mantém a proporção da imagem */
+.navsocials ul li img {
+    width: 50px;
+    height: auto;
     position: absolute; /* Posicionamento fixo para manter a imagem no mesmo local ao rolar a página */
 top: 450px; /* Distância do topo */
 right: 350px; /* Distância da direita */
@@ -69,26 +93,35 @@ height: 50px; /* Mantém a proporção da imagem */
 }
 
 /* Primeira imagem */
-nav ul li:nth-child(1) img {
-    top: 450px; /* Distância do topo */
-    left: 910px; /* Distância da borda esquerda */
+.navsocials ul li:nth-child(1) img {
+    top: -25px; /* Distância do topo */
+    left: 520px; /* Distância da borda esquerda */
 }
 
 /* Segunda imagem */
-nav ul li:nth-child(2) img {
-    top: 450px; /* Distância do topo */
-    left: 1010px; /* Distância da borda esquerda */
+.navsocials ul li:nth-child(2) img {
+    top: -25px; /* Distância do topo */
+    left: 600px; /* Distância da borda esquerda */
 }
 
 /* Terceira imagem */
-nav ul li:nth-child(3) img {
-    top: 450px; /* Distância do topo */
-    left: 1110px; /* Distância da borda esquerda */
+.navsocials ul li:nth-child(3) img {
+    top: -25px; /* Distância do topo */
+    left: 680px; /* Distância da borda esquerda */
 }
 
 
+.projetos {
+    margin-top: 150px; /* Distância do topo */
+    margin-right: 450px;
+    display: flex; /* Usa flexbox para centralizar verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    flex-direction: column; /* Alinha os elementos em uma coluna */
+}
 
-section {
+
+.projetos section {
     margin-bottom: 40px;
 }
 
@@ -97,75 +130,3 @@ footer {
     margin-top: 40px;
 }
 
-/* Media query para dispositivos menores que 768px */
-@media (max-width: 768px) {
-    .container {
-        width: 90%; /* Reduz a largura do container */
-    }
-
-    nav ul li {
-        margin-right: 5px; /* Reduz o espaçamento entre os ícones */
-    }
-
-    nav ul li img {
-        width: 40px; /* Reduz a largura dos ícones */
-    }
-}
-
-/* Media query para dispositivos menores que 576px */
-@media (max-width: 576px) {
-    .container {
-        width: 95%; /* Reduz ainda mais a largura do container */
-    }
-
-    nav ul {
-        flex-direction: column; /* Altera o layout dos ícones para uma coluna */
-        align-items: center; /* Centraliza os itens verticalmente */
-    }
-
-    nav ul li {
-        margin-bottom: 5px; /* Adiciona espaçamento entre os ícones na vertical */
-    }
-
-    nav ul li img {
-        width: 60px; /* Ajusta a largura dos ícones */
-    }
-}
-
-
-
-
-/* Media query para dispositivos menores que 768px */
-@media (max-width: 768px) {
-    .profile img {
-        width: 90%; /* Reduz a largura do container */
-    }
-
-    nav ul li {
-        margin-right: 5px; /* Reduz o espaçamento entre os ícones */
-    }
-
-    nav ul li img {
-        width: 40px; /* Reduz a largura dos ícones */
-    }
-}
-
-/* Media query para dispositivos menores que 576px */
-@media (max-width: 576px) {
-    .profile img {
-        width: 95%; /* Reduz ainda mais a largura do container */
-    }
-
-    nav ul {
-        flex-direction: column; /* Altera o layout dos ícones para uma coluna */
-        align-items: center; /* Centraliza os itens verticalmente */
-    }
-
-    nav ul li {
-        margin-bottom: 5px; /* Adiciona espaçamento entre os ícones na vertical */
-    }
-
-    nav ul li img {
-        width: 60px; /* Ajusta a largura dos ícones */
-    }
-}
