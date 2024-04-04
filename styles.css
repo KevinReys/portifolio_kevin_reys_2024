@@ -1,0 +1,97 @@
+body {
+    background-image: url('img/background1.jpg');
+    background-size: cover; /* Faz a imagem cobrir todo o fundo */
+    background-repeat: no-repeat; /* Evita a repetição da imagem */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #1d1c1c; /* Branco */
+}
+
+h1 { /* ''FULLSTACK DEVELOPER'' */
+    color: #fff;
+    font-size: 50px;
+    margin-bottom: 10px; /* Margem inferior */
+}
+
+h3 { /* ''Estudante de ADS'' */
+    color: #413f3f;
+    font-size: 21px; 
+    margin-bottom: 10px; /* Margem inferior*/
+}
+
+h4 { /* ''Oi, eu sou o Kevin!'' */
+    color: #ffffff;
+    font-size: 20px;
+    margin-top: 15px; /* Margem superior */
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+nav {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Para alinhar os itens horizontalmente */
+}
+
+li {
+    margin-right: 10px; /* Adiciona um espaço entre os itens */
+}
+
+a {
+    text-decoration: none; /* Remove sublinhado dos links */
+}
+
+img {
+    width: 50px; /* Define a largura dos ícones */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff; /* Branco */
+}
+
+/* GITHUB,LINKEDIN e CV */
+ul li img {
+    width: 80px; /*Largura*/
+    height: auto; /*Proporção da imagem */
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+}
