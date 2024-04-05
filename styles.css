@@ -1,5 +1,5 @@
 body {
-    background-image: url('img/gradient-black-grey-linear-3840x2160-c2-000000-778899-a-90-f-14.svg');
+    background-image: linear-gradient(to bottom, rgba(103, 111, 136, 0.8), rgba(63, 59, 59, 0.5));
     background-size: cover; 
     background-repeat: no-repeat; /* Evita a repetição da imagem */
     margin: 0;
@@ -20,6 +20,7 @@ body {
     height: auto; /* Altura automática para manter a proporção */
     border-radius: 50%; 
     border: 0.2em solid #dad9f3; /* Adiciona uma borda azul claro com largura de 0.5em */
+    overflow-x: hidden;
 }
 
 .profile img.hover {
@@ -195,3 +196,75 @@ footer {
     margin-right: 0; /* Remove a margem direita da última imagem */
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* INICIO: ICONES DENTRO DO RODAPÉ FINAL */
+.footersocials {
+    position: absolute;
+    bottom: -110%; /* Distância do rodapé */
+    right: 1%; /* Distância da direita */
+}
+.footersocials a { 
+    display: contents;
+    margin-left: 4%; /* Espaço entre os ícones */
+}
+
+.footersocials img {
+    width: 5%; /* Largura dos ícones */
+    height: auto; 
+}
+
+.footersocials img:hover {
+    transform: scale(1.3); /* Ao passar o mouse */
+}
+
+
+/* Media queries para tornar a página responsiva */
+/* Tablets e dispositivos móveis em orientação retrato */
+@media only screen and (max-width: 768px) {
+    .footersocials {
+        bottom: 5px;
+        right: 5px;
+    }
+    .footersocials a { 
+        margin-left: 2vw;
+    }
+    .footersocials img {
+        width: 8vw;
+    }
+}
+
+/* Smartphones em orientação retrato */
+@media only screen and (max-width: 480px) {
+    .footersocials {
+        bottom: 3px;
+        right: 3px;
+    }
+    .footersocials a { 
+        margin-left: 1vw;
+    }
+    .footersocials img {
+        width: 10vw;
+    }
+}
+/* FIM: ICONES DENTRO DO RODAPÉ FINAL */
