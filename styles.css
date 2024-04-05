@@ -1,24 +1,12 @@
 body {
     background-image: url('img/gradient-black-grey-linear-3840x2160-c2-000000-778899-a-90-f-14.svg');
-    background-size: cover; /* Faz a imagem cobrir todo o fundo */
+    background-size: cover; 
     background-repeat: no-repeat; /* Evita a repetição da imagem */
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    color: #1d1c1c; /* Branco */
+    color: #1d1c1c; 
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* PROFILE IMAGE */
@@ -48,27 +36,6 @@ body {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* GITHUB - LINKEDIN - CV */
 .container {
     width: 80%;
@@ -79,26 +46,6 @@ body {
 header {
     display: flex;
     flex-direction: column; 
-}
-
-h2, h1, h3 {
-    margin: 0;
-}
-
-h1 {
-    font-size: 6vw; /* Tamanho de fonte responsivo em relação à largura da viewport */
-    color: white;
-    margin-right: 20%; /* Margem direita para alinhar à direita */
-}
-
-h2 {
-    font-size: 5vw; /* Tamanho de fonte responsivo em relação à largura da viewport */
-    margin-right: 15%; /* Margem direita para alinhar à direita */
-}
-
-h3 {
-    font-size: 2vw; /* Tamanho de fonte responsivo em relação à largura da viewport */
-    margin-right: 10%; /* Margem direita para alinhar à direita */
 }
 
 .navsocials {
@@ -131,7 +78,28 @@ h3 {
     height: auto; /* Altura automática para manter a proporção */
 }
 
-/* Ajuste de posição das imagens em diferentes tamanhos de tela */
+
+h1 {
+    font-size: 6vw; /* Tamanho de fonte responsivo em relação à largura da viewport */
+    color: white;
+    margin-right: 20%; /* Margem direita para alinhar à direita */
+}
+
+h2 {
+    font-size: 5vw; /* Tamanho de fonte responsivo em relação à largura da viewport */
+    margin-right: 15%; /* Margem direita para alinhar à direita */
+}
+
+h3 {
+    font-size: 2vw; /* Tamanho de fonte responsivo em relação à largura da viewport */
+    margin-right: 10%; /* Margem direita para alinhar à direita */
+}
+
+h2, h1, h3 {
+    margin: 0;
+}
+
+/* MEDIAQUERY NAVSOCIALS */
 @media screen and (max-width: 768px) {
     .navsocials ul li:nth-child(1) img {
         left: 10vw; /* Nova posição para a primeira imagem em telas menores */
@@ -146,34 +114,25 @@ h3 {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.projetos {
-    margin-top: 150px; /* Distância do topo */
-    margin-right: 450px;
-    display: flex; /* Usa flexbox para centralizar verticalmente */
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    flex-direction: column; /* Alinha os elementos em uma coluna */
+h4 {
+    text-align: left; /* Alinha o texto à esquerda */
+    max-width: 90%; /* Define uma largura máxima para o texto */
+    padding: 1%; /* Adiciona um espaçamento interno ao redor do texto */
+    font-size: 1.5vw; /* Define o tamanho da fonte responsivo em relação à largura da viewport */
+    margin-right: auto; /* Alinha o texto mais à direita possível */
+    margin-left: -1%; /* Define uma margem esquerda para dispositivos maiores */
+    margin-top: -3vh; /* Define uma margem superior responsiva em relação à altura da viewport */
 }
 
-
-.projetos section {
-    margin-bottom: 40px;
+/* MEDIAQUERY h4 */
+@media screen and (max-width: 768px) {
+    h4 {
+        font-size: 3vw; /* Ajusta o tamanho da fonte para dispositivos menores */
+        margin-left: 2%; /* Define uma margem esquerda menor para dispositivos menores */
+        margin-top: 3vh; /* Define uma margem superior menor para dispositivos menores */
+    }
 }
+
 
 footer {
     text-align: center;
@@ -189,22 +148,50 @@ footer {
 
 
 
-
-
-
-
-h4 {
-    text-align: left; /* Alinha o texto à esquerda */
-    max-width: 800px; /* Define uma largura máxima para o texto */
-    margin: 0 auto; /* Centraliza o texto horizontalmente */
-    padding: 20px; /* Adiciona um espaçamento interno ao redor do texto */
-    font-size: 1.2em; /* Define o tamanho da fonte */
+.projetos {
+    width: 130%;
+    margin-top: 7vh; /* 10% da altura da viewport para o espaço no topo */
+    text-align: justify;
 }
 
-/* Adiciona media query para tornar o texto responsivo */
-@media screen and (max-width: 768px) {
-    h4 {
-        font-size: 1em; /* Reduz o tamanho da fonte para dispositivos menores */
-   
-    }
+.projetos section {
+    padding: 2vh 10%; /* Espaçamento vertical / espaçamento horizontal */
+    
 }
+
+.projetos h3,
+.projetos h4 {
+    font-size: 3vh; /* 4% da altura da viewport para o tamanho da fonte (para h3) e 2% para h4 */
+    color: #000000;
+    margin-left: -08%; /* Margem esquerda */
+    margin-right: 28%; /* Margem direita */
+}
+
+
+.carrossel {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    overflow-x: auto; /* Adiciona uma barra de rolagem horizontal se os cards excederem a largura da tela */
+}
+
+
+
+
+.containerU {
+    width: 100%; /* Largura dos contêineres dos cards */
+    margin-bottom: 5vh; /* Espaçamento inferior entre os cards */
+    white-space: nowrap; /* Evita que os cards quebrem para a linha seguinte */
+    overflow-x: hidden; /* Remove a barra de rolagem horizontal */
+}
+
+.containerU img {
+    width: 20%; /* Largura das imagens */
+    display: inline-block; /* Exibe as imagens lado a lado */
+    margin-right: 5%; /* Espaçamento entre as imagens */
+}
+
+.containerU img:last-child {
+    margin-right: 0; /* Remove a margem direita da última imagem */
+}
+
