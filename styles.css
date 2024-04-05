@@ -6,6 +6,7 @@ body {
     padding: 0;
     font-family: Arial, sans-serif;
     color: #1d1c1c; 
+    overflow-x: hidden;
 }
 
 
