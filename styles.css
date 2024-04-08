@@ -1,7 +1,7 @@
 body {
     background-image: linear-gradient(to bottom, rgba(103, 111, 136, 0.8), rgba(63, 59, 59, 0.5));
     background-size: cover; 
-    background-repeat: no-repeat; /* Evita a repetição da imagem */
+    
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
@@ -52,7 +52,7 @@ header {
 
 .navsocials {
     position: absolute;
-    top: 9vh; /* Distância do topo em relação à altura da viewport */
+    top: 8vh; /* Distância do topo em relação à altura da viewport */
     right: 0;
     left: 18%; /* Define a largura total da div */
     text-align: center; /* Centraliza os elementos filho horizontalmente */
@@ -60,7 +60,7 @@ header {
 
 .navsocials ul li a:hover img {
     filter: grayscale(100%) brightness(1000%) sepia(80%) hue-rotate(200deg); /* Aplica uma cor azul ao ícone */
-    transform: scale(1.6); /* Aumenta o tamanho do ícone */
+    transform: scale(1.4); /* Aumenta o tamanho do ícone */
     transition: transform 0.3s; /* Adiciona uma transição suave para a mudança de tamanho */
 }
 
@@ -88,12 +88,13 @@ h1 {
 }
 
 h2 {
-    font-size: 5vw; /* Tamanho de fonte responsivo em relação à largura da viewport */
+
+    font-size: 4.5vw; /* Tamanho de fonte responsivo em relação à largura da viewport */
     margin-right: 15%; /* Margem direita para alinhar à direita */
 }
 
 h3 {
-    font-size: 2vw; /* Tamanho de fonte responsivo em relação à largura da viewport */
+    font-size: 2.2vw; /* Tamanho de fonte responsivo em relação à largura da viewport */
     margin-right: 10%; /* Margem direita para alinhar à direita */
 }
 
